@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+    <!--适配手机-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>重阳</title>
+</head>
+<!--谨记每次都要包含-->
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<body>
+	<div class="content">
+		<div class="page page1">
+			<img src="img/20.jpg" class="page1_20"/>
+			<img src="img/24.jpg" class="page1_24"/>
+			<img src="img/25.jpg" class="page1_25"/>
+			<img src="img/45.jpg" class="page1_45"/>
+			<img src="img/56.jpg" class="page1_56"/>
+			<img src="img/51.jpg" class="page1_51"/>
+			<img src="img/37.jpg" class="page1_37"/>
+		</div>
+		<div class="page page2">
+			<img src="img/20.jpg" class="page2_20"/>
+			<img src="img/29.jpg" class="page2_29"/>
+			<img src="img/32.jpg" class="page2_32"/>
+			<img src="img/30.jpg" class="page2_30"/>
+			<img src="img/40.jpg" class="page2_40"/>
+			<img src="img/39.jpg" class="page2_39"/>
+			<img src="img/38.jpg" class="page2_38"/>
+			<img src="img/36.jpg" class="page2_36"/>
+			<img src="img/43.jpg" class="page2_43"/>
+			<img src="img/45.jpg" class="page2_45"/>
+			<img src="img/wenzi.png" class="page2_wenzi"/>
+		</div>
+		<div class="page page3">
+			<img src="img/20.jpg" class="page3_20"/>
+			<img src="img/26.jpg" class="page3_26"/>
+			<img src="img/41.jpg" class="page3_41"/>
+			<img src="img/25.jpg" class="page3_25"/>
+			<img src="img/33.jpg" class="page3_33"/>	
+			<img src="img/45.jpg" class="page3_45"/>
+			<p class="page3_txt1">中文名称: 重阳节</p>
+			<p class="page3_txt2">登高节、晒秋节、重九节</p>
+			<p class="page3_txt3">节日时间: 农历九月初九</p>
+			<p class="page3_txt4">节日类型: 传统节日</p>
+			<p class="page3_txt5">节日饮食: 重阳糕、菊花酒</p>
+			<p class="page3_txt6">节日意义: 敬祖、敬老、感恩</p>
+			<p class="page3_txt7">活动: 插茱萸、赏秋、赏菊、登高、踏秋</p>
+		</div>
+		<div class="page page4">
+			<img src="img/20.jpg" class="page4_20"/>
+			<img src="img/14.jpg" class="page4_14"/>
+			<img src="img/24.jpg" class="page4_24"/>
+			<img src="img/25.jpg" class="page4_25"/>
+			<img src="img/26.jpg" class="page4_26"/>
+			<img src="img/37.jpg" class="page4_37"/>
+			<img src="img/44.jpg" class="page4_44"/>
+			<img src="img/46.jpg" class="page4_46"/>
+			<img src="img/48.jpg" class="page4_48"/>
+			<img src="img/49.jpg" class="page4_49"/>
+			<img src="img/50.jpg" class="page4_50"/>
+			<img src="img/52.jpg" class="page4_52"/>
+		</div>
+		<div class="page page5">
+			<img src="img/20.jpg" class="page5_20"/>
+			<img src="img/24.jpg" class="page5_24"/>
+			<img src="img/25.jpg" class="page5_25"/>
+			<img src="img/26.jpg" class="page5_26"/>
+			<img src="img/37.jpg" class="page5_37"/>
+			<img src="img/47.jpg" class="page5_47"/>
+			<img src="img/50.jpg" class="page5_50"/>
+			<img src="img/48.jpg" class="page5_48"/>
+			<img src="img/44.jpg" class="page5_44"/>
+			<img src="img/52.jpg" class="page5_52"/>
+			<img src="img/7.jpg" class="page5_7"/>
+		</div>
+		<div class="page page6">
+			<!--场景一-->
+			<img src="img/2.jpg" class="page6_2"/>
+			<img src="img/9.jpg" class="page6_9" onclick="beat(this)"/>
+			<img src="img/18.jpg" class="page6_18"/>
+			<!--场景二-->
+			<img src="img/6.jpg" class="page6_6"/>
+			<img src="img/13.jpg" class="page6_13"/>
+		</div>
+	</div>
+	<!--悬停指示-->
+	<img src="img/arrow-up.png" class="arrow-up"/>
+	<!--audio音乐播放器 src音乐路径 autoplay自动播放-->
+	<audio id="player" src="img/music.mp3" autoplay="autoplay"></audio>
+	<!--音乐图标-->
+	<img src="img/musicBtn.png" class="musicBtn" onclick="playMusic(this)"/>
+</body>
+<!--谨记每次都要包含js文件，注意逻辑顺序-->
+<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+<!--手机滑动固件，不用改动-->
+<script src="js/jquery.touchSwipe.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+</html>

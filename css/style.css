@@ -1,0 +1,521 @@
+/*一般的设计规则是先布局再做动画*/
+*{
+	/*所有标签的内外边距都是0px*/
+	margin: 0px;
+	padding: 0px;
+}
+.content{
+	position: absolute;
+	/*暂时不设置大小，一会在js中设置*/
+	/*这样写了以后滚轮不能拖了，overflow多余部分隐藏，如果要翻页的话要注释下句*/
+	/*overflow: hidden;*/
+}
+/*这里的.page .page1 .page2 .page3 .page4 都是同一级别的注意定位属性*/
+.page{
+	/*相对属性就行，那个不用连在一起*/
+	position: relative;
+	/*超出的部分隐藏掉，超出以后也不好晃动*/
+	overflow: hidden;
+}
+.page1{
+	background-color: white;
+}
+.page2{
+	background-color: white;
+}
+.page3{
+	background-color: white;
+}
+.page4{
+	background-color: white;
+}
+.page5{
+	background-color: white;
+}
+.page6{
+	background-color: white;
+}
+/*****page1*****/
+.page1 img{
+	position: absolute;
+}
+.page1_20{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+.page1_24{
+	width: 40%;
+	height: 22%;
+	top: 5%;
+	right: 10%;
+	display: none;
+}
+.page1_25{
+	width: 35%;
+	height: 22%;
+	top: 28%;
+	right: 13%;
+	display: none;
+}
+.page1_45{
+	width: 10%;
+	height: 5%;
+	top: 28%;
+	right: 10%;
+	display: none;
+}
+.page1_56{
+	width: 0%;
+	height: 0%;
+	top: 12%;
+	left: 5%;
+	animation: rotate_56 3s both linear;
+
+}
+@keyframes rotate_56{
+	from{}
+	to{transform: rotate(360deg);}
+}
+.page1_51{
+
+	width: 100%;
+	height: 50%;
+	bottom:-100%;
+	left: 0px;
+}
+.page1_37{
+	width: 20%;
+	bottom:-35%;
+	left: 35%;
+}
+/****page2*****/
+.page2 img{
+	position: absolute;
+}
+/*背景图大的*/
+.page2_20{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+/*背景图小的*/
+.page2_29{
+	width: 100%;
+	top:0px;
+	left: 0px;
+	display: none;
+}
+/*重字*/
+.page2_32{
+	width: 33%;
+	left: -100%;
+	top: 40%;
+}
+/*阳字*/
+.page2_30{
+	width: 23%;
+	left: -100%;
+	top: 38%;
+}
+/*农历九月初九*/
+.page2_40{
+	width: 35%;
+	top: 45%;
+	right: -100%;
+	animation: page2_scale 3s infinite linear;
+
+}
+/*小横线*/
+.page2_38{
+	width: 35%;
+	top: 49%;
+	right: 5%;
+	animation: page2_scale 3s infinite linear;
+	display: none;
+}
+/*独在异乡为异客*/
+.page2_39{
+	width: 35%;
+	top: 50%;
+	right: -100%;
+
+}
+/*小横线*/
+.page2_36{
+	width: 35%;
+	top: 53%;
+	right: 5%;
+	animation: page2_scale 3s infinite linear;
+	display: none;
+}
+/*每逢佳节倍思亲*/
+.page2_43{
+	width: 35%;
+	top: 54%;
+	right: -100%;
+
+}
+/*文字*/
+.page2_wenzi{
+	width: 94%;
+	left: 3%;
+	bottom: 15%;
+	display: none;
+	animation: page2_rotate 2s linear;
+}
+@keyframes page2_rotate{
+	from{}
+	25%{}
+	50%{transform: rotate(360deg);}
+	75%{}
+	to{}
+}
+/*大印*/
+.page2_45{
+	width: 8%;
+	top: 37%;
+	left: 7%;
+	animation: page2_scale 2s infinite linear;
+	display: none;
+}
+
+@keyframes page2_scale{
+	from{}
+	50%{transform: scale(1.1);}
+	to{}
+}
+/****page3*****/
+.page3 img{
+	position: absolute;
+}
+.page3 p{
+	position: absolute;
+}
+.page3_20{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+/**框**/
+.page3_26{
+	width: 90%;
+	height: 90%;
+	top: 5%;
+	right: 5%;
+	left: 5%;
+	display: none;
+}
+/**底**/
+.page3_41{
+	width: 90%;
+	height: 30%;
+	bottom: -45%;
+	right: 5%;
+	left: 5%;
+}
+/**阳**/
+.page3_25{
+	width: 20%;
+	height: 10%;
+	top: 10%;
+	right: 150%;
+	display: none;
+}
+/**重**/
+.page3_33{
+	width: 20%;
+	height: 10%;
+	top: 10%;
+	right: -50%;
+	display: none;
+}
+/**印章**/
+.page3_45{
+	width: 10%;
+	height: 6%;
+	top: 11%;
+	right: 48%;
+	display: none;
+}
+/***内容***/
+.page3_txt1{
+	width: 80%;
+	height: 8%;
+	left: 10%;
+	top: 18%;
+	display: none;
+}
+.page3_txt2{
+	width: 80%;
+	height: 8%;
+	left: 10%;
+	top: 24%;
+	display: none;
+}
+.page3_txt3{
+	width: 80%;
+	height: 8%;
+	left: 10%;
+	top: 30%;
+	display: none;
+}
+.page3_txt4{
+	width: 80%;
+	height: 8%;
+	left: 10%;
+	top: 36%;
+	display: none;
+}
+.page3_txt5{
+	width: 80%;
+	height: 8%;
+	left: 10%;
+	top: 42%;
+	display: none;
+}
+.page3_txt6{
+	width: 80%;
+	height: 8%;
+	left: 10%;
+	top: 48%;
+	display: none;
+}
+.page3_txt7{
+	width: 80%;
+	height: 8%;
+	left: 10%;
+	top: 56%;
+	display: none;
+}
+/****page4****/
+.page4 img{
+	position: absolute;
+}
+.page4_14{
+	width: 38%;
+	height: 38%;
+	top: 10%;
+	right: 45%;	
+	display: none;
+}
+.page4_20{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	right:0px;	
+}
+.page4_24{
+	width: 20%;
+	height: 15%;
+	top: 5%;
+	right: 10%;
+	display: none;	
+}
+.page4_25{
+	width: 20%;
+	height: 15%;
+	top: 25%;
+	right: 10%;
+	display: none;
+}
+.page4_26{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	display: none;
+}
+.page4_37{
+	width: 20%;
+	top: 60%;
+	right: 50%;
+	display: none;
+}
+.page4_44{
+	width: 70%;
+	height: 40%;
+	border-bottom: 0%;
+	top: 60%;
+	right: 0%;
+	display: none;
+
+}
+.page4_46{
+	width: 12%;
+	height: 8%;
+	top: 50%;
+	right: 13%;
+	display: none;
+}
+.page4_48{
+	width: 5%;
+	height: 5%;
+	top: 20%;
+	right: 7%;
+	display: none;
+}
+.page4_49{
+	width: 40%;
+	height: 40%;
+	top: 10%;
+	right: 45%;
+	display: none;
+}
+.page4_50{
+	position: absolute;
+	width: 14%;
+	height: 9%;
+	top: 49.5%;
+	right: -20%;
+}
+.page4_52{
+	width: 60%;
+	height: 40%;
+	border-bottom: 0%;
+	top: 60%;
+	right: 40%;	
+	display: none;
+}
+/****page5****/
+.page5 img{
+	position: absolute;
+}
+.page5_7{
+	width: 40%;
+	height: 40%;
+	top: 10%;
+	left:-100%;	
+}
+.page5_20{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left:0px;
+	display: none;		
+}
+.page5_26{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left:0px;	
+	display: none;	
+}
+.page5_24{
+	width: 20%;
+	height: 15%;
+	top: 5%;
+	right: 15%;
+	display: none;	
+}
+.page5_25{
+	width: 20%;
+	height: 15%;
+	top: 25%;
+	right: 15%;
+	display: none;	
+}
+.page5_37{
+	width: 20%;
+	bottom: 30%;
+	left: 20%;
+	display: none;	
+}
+.page5_47{
+	width: 12%;
+	top: 50%;
+	right: 15%;
+	display: none;	
+}
+.page5_50{
+	width: 13.5%;
+	top: 49.5%;
+	right: 14%;
+	display: none;	
+}
+.page5_48{
+	width: 9%;
+	height: 6%;
+	top: 24%;
+	right: 5%;
+	display: none;	
+}
+.page5_44{
+	width: 70%;
+	height: 40%;
+	top:60%;
+	right: 0%;
+	display: none;	
+}
+.page5_52{
+	width: 60%;
+	height: 40%;
+	top:60%;
+	right: 40%;
+	display: none;	
+}
+/****page6****/
+.page6 img{
+	position: absolute;
+}
+.page6_2{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+.page6_9{
+	width: 50%;
+	top: 40%;
+	left: -100%;
+	animation: page6_scale 2s infinite linear;
+}
+.page6_18{
+	width: 65%;
+	top: 55%;
+	right: -100%;
+}
+@keyframes page6_scale{
+	from{}
+	50%{transform: scale(0.9);}
+	to{}
+}
+/*场景二*/
+.page6_6{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.page6_13{
+	width:40%;
+	top: 30%;
+	left: 37%;
+	display: none;
+}
+/****向上滑动指示*****/
+.arrow-up{
+	position: fixed;
+	width: 15%;
+	left: 42.5%;
+	bottom: 5%;
+	animation: upanddown 2s infinite linear;
+}
+@keyframes upanddown{
+	from{}
+	50%{bottom: 10%;}
+	to{}
+}
+/*音乐图标的样式*/
+.musicBtn{
+	position: fixed;
+	width: 50px;
+	width: 50px;
+	top: 10px;
+	right: 10px;
+	animation: musicbtnrotate 2s infinite linear;
+}
+@keyframes musicbtnrotate{
+	from{}
+	to{transform: rotate(360deg);}
+}
